@@ -1,4 +1,4 @@
-package TryThis14_1;
+package SelfTests.Nr9;
 
 public class LambdaArgumentDemo {
     // This method has a functional interface as the type of its
@@ -41,19 +41,28 @@ public class LambdaArgumentDemo {
 
         // This block lambda inverts the case of the characters in the
         // string. It is also embedded directly in the call to changeStr().
-        outStr = changeStr((str) -> {
-            String result = "";
-            char ch;
+//        outStr = changeStr((str) -> {
+//            String result = "";
+//            char ch;
+//
+//            for(int i = 0; i < str.length(); i++ ) {
+//                ch = str.charAt(i);
+//                if(Character.isUpperCase(ch))
+//                    result += Character.toLowerCase(ch);
+//                else
+//                    result += Character.toUpperCase(ch);
+//            }
+//            return result;
+//        }, inStr);
 
-            for(int i = 0; i < str.length(); i++ ) {
-                ch = str.charAt(i);
-                if(Character.isUpperCase(ch))
-                    result += Character.toLowerCase(ch);
-                else
-                    result += Character.toUpperCase(ch);
-            }
+        StringFunc remove = (str) ->  {
+            String result = "";
+
+            for(int i = 0; i < str.length(); i++)
+                if(str.charAt(i) != ' ') result += str.charAt(i);
+
             return result;
-        }, inStr);
+        };
 
         System.out.println("The string in reversed case: " + outStr);
     }

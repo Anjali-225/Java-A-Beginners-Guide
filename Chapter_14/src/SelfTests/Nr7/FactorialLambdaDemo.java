@@ -1,4 +1,4 @@
-package SelfTests;
+package SelfTests.Nr7;
 
 public class FactorialLambdaDemo {
     public static void main(String args[])
